@@ -1,0 +1,139 @@
+.dashboard {
+    display: flex;
+}
+
+.sideNavBar {
+    border-right: 1px solid #edf5fe;
+    width: 224px;
+    height: 100vh;
+
+    background: #fff;
+
+    position: fixed;
+    left: 0px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+
+    font-family: Poppins;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.activeItem {
+    width: 211px;
+    height: 51px;
+
+    background: rgba(67, 145, 237, 0.1);
+
+    font-family: Poppins;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+
+    padding: 3% 3% 3% 3%;
+}
+
+.inactiveItem {
+    font-family: Poppins;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: #707070;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+
+    padding: 3% 3% 3% 3%;
+}
+
+.logoutText {
+    font-family: Noto Sans;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: center;
+
+}
+
+.yesLogout {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    color: #FFFFFF;
+
+
+    border-radius: 12px;
+    /* padding: 17px 4px; */
+    padding: 5px 1px;
+    width: 300px;
+    height: 45px;
+
+    box-shadow: 0 2px 12px 0 rgba(130, 105, 140, 0.2);
+    background: #17a2b8;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cancel {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    color: #CF3636;
+
+    border: 1px solid #cf3636;
+    border-radius: 12px;
+    width: 300px;
+    height: 45px;
+
+    box-shadow: 0 2px 12px 0 rgba(130, 105, 140, 0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.customModal {
+    border-radius: 11px;
+
+
+    background: #fff;
+}
