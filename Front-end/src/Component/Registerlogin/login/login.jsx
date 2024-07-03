@@ -49,7 +49,7 @@ const Login = () => {
         setFormSubmitted(true);
         dispatch(toggleLoader());
         try {
-            const response = await axios.post("http://localhost:5000/api/users/login", formData);
+            const response = await axios.post(`${baseUrl}/api/users/login`, formData);
             console.log(response.data);
             toast.success(response.data.message);
             localStorage.setItem('token', response.data.token);

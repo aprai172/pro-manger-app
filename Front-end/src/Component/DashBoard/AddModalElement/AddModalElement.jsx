@@ -75,7 +75,7 @@ const AddModalElement = () => {
 
         console.log(data);
         
-        axios.post("http://localhost:5000/api/tasks/addtask", data,
+        axios.post(`${baseUrl}/api/tasks/addtask`, data,
             {
                 headers: {
                     'Authorization': localStorage.getItem('token')

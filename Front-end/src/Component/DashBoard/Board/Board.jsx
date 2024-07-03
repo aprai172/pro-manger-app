@@ -12,8 +12,10 @@ import axios from 'axios';
 import AddModalElementEdit from '../AddModalElementEdit/AddModalElementEdit';
 import collapse from '../../../assets/collapse.png';
 import Add from '../../../assets/Add.png';
+import { Url } from '../../../Utils/Url';
 
 const Board = () => {
+    const baseUrl = Url();
     const [selectedOption, setSelectedOption] = useState('This Week');
     const [collapsed, setCollapsed] = useState({
         backlog: false,
@@ -35,7 +37,7 @@ const Board = () => {
     const fetchTasks = async (userId, filter) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post("http://localhost:5000/api/tasks/gettasks", { userId, filter }, {
+            const response = await axios.post(`${baseUrl}/api/tasks/gettasks`, { userId, filter }, {
                 headers: {
                     'Authorization': token
                 }

@@ -13,7 +13,7 @@ const TaskList = ({ taskName, completed, taskListId, checkListId, myChecklistDis
     setIsChecked(newChecked);
 
     try {
-      const response = await axios.post(`http://localhost:5000/api/tasks/updatechecklist`, {
+      const response = await axios.post(`${baseUrl}/api/tasks/updatechecklist`, {
         taskId: taskListId,
         checklistItemId: checkListId,
         completed: newChecked,
