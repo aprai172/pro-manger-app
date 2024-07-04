@@ -5,6 +5,7 @@ import RegisterLogin from './Page/RegisterLogin/RegisterLogin';
 import Dashboard from './Page/DashBoard/Dashboard';
 import Public from './Page/Public/Public';
 import NotFound from './Component/DashBoard/NotFound/NotFound';
+import ProtectRoter from './ProtectedRoutes/ProtectedRoutes';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<RegisterLogin />} />
           <Route path="sharedtasklink/:taskId" element={<PublicWithTaskId />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<ProtectRoter><Dashboard /></ProtectRoter>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
