@@ -1,8 +1,9 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useTimer } from 'react-timer-hook';
 
 const ProtectedRoutes = ({ children }) => {
+  const navigate = useNavigate();
   const isAuthenticated = localStorage.getItem('das');
 
   const expiryTimestamp = new Date();
@@ -19,11 +20,12 @@ const ProtectedRoutes = ({ children }) => {
     }
   });
 
-  return isAuthenticated ? (
-    children
-  ) : (
-    <Navigate to="/" replace />
-  );
+  if (!isAuthenticated) {
+    navigate('/');
+    return null; // or a loading indicator, or some other fallback UI
+  }
+
+  return children;
 };
 
 export default ProtectedRoutes;
